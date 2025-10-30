@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathIt - Your all in one math practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Navagation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #1f1f1f;
+            color: #fff;
+            display: flex;
+            justify-content: center; /* centers the nav links */
+            align-items: center;
+            height: 55px;
+            padding: 0 1rem;
+            z-index: 100;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+/* Centered nav links */
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff66cc;
+}
+
+/* Learn More (READY?/GO!) button on right */
+/* Learn More (READY?/GO!) button on right */
+.button {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #363636;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.btnTwo {
+  position: absolute;
+  top: 0;
+  left: -160px;
+  width: 150px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease;
+  z-index: 2;
+}
+
+.btnText {
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+  transition: margin-left 0.3s ease;
+}
+
+.btnText2 {
+  color: #000000;
+  font-weight: bold;
+}
+
+.button:hover .btnTwo {
+  left: 0;
+}
+
+.button:hover .btnText {
+  margin-left: 40px;
+}
+
+.button:active {
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+        header {
+    position: relative;
+    min-height: 20vh; /* taller for more scroll space */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 203, 154, 0.8) 0%,
+        rgba(255, 66, 246, 0.6) 25%,
+        rgba(162, 0, 255, 0.9) 65%,
+        rgba(2, 0, 36, 1) 100%
+    );
+}
+
+.HeaderTitle {
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: sans-serif;
+    margin-bottom: 0rem;
+    position: relative;
+    color: #fff;
+    z-index: 1;
+}
+
+.HeaderSubtitle {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    z-index: 1;
+}
+.HeaderSubtitle2 {
+    font-size: 1rem;
+    margin-top: 0rem;
+    position: relative;
+    color: #fff;
+    z-index: 1;
+}
+
+/* Wave stays at bottom */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 2; /* higher than text */
+}
+
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        footer {
+            background: #ffffff;
+            color: #000;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <style>
+
+        .DownloadContainer {
+        margin-top: 50px;
+        margin-bottom: 450px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        background: #ffffff;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        background: #1e1e1e;
+        color: white;
+        border-radius: 20px;
+        padding: 1.5rem;
+        width: 75%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+        width: 180px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-right: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    .card-content {
+        flex: 1;
+    }
+
+    .card h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .card h4 {
+        margin: 0.3rem 0 1rem;
+        font-weight: 400;
+        color: #ccc;
+    }
+
+    .card p {
+        margin: 0 0 1rem;
+        color: #aaa;
+        font-size: 0.95rem;
+    }
+
+    .social-icons {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    }
+
+/* Learn More (READY?/GO!) button on right */
+.buttonC {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #363636;
+  width: 200px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.btnTwoC {
+  position: absolute;
+  top: 0;
+  left: -160px;
+  width: 200px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease;
+  z-index: 2;
+}
+
+.btnTextC {
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+  transition: margin-left 0.3s ease;
+}
+
+.btnText2C {
+  color: #000000;
+  font-weight: bold;
+}
+
+.buttonC:hover .btnTwoC {
+  left: 0;
+}
+
+.buttonC:hover .btnTextC {
+  margin-left: 40px;
+}
+
+.buttonC:active {
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="button">
+          <span class="btnText">Get started?</span>
+          <div class="btnTwo">
+            <span class="btnText2">Learn Now!</span>
+        </div>
+    </div>
+    </nav>
+
+    <header>
+        <h1 class="HeaderTitle" id="text">MathIt.org</h1>
+        <p class="HeaderSubtitle">Your all in one math practice hub</p>
+        <p class="HeaderSubtitle2">PreK • Arithmetic • Algebra • Geometry •Triginometry • Calculus • Tutoring • SAT</p>
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none" class="wave">
+            <path fill="#fff" d="M0,120 C360,180 1080,60 1440,120 L1440,150 L0,150 Z"></path>
+        </svg>
+    </header>
+
+
+    <section class="DownloadContainer" id="home">
+  <div class="card">
+    <img src="Icon.png" alt="Profile Photo">
+    <div class="card-content">
+      <h2>Try MathIt out!</h2>
+      <h4>“Practice. Progress. Perfect Math.”</h4>
+
+      <div class="social-icons">
+        <div class="buttonC">
+          <span class="btnTextC">Download</span>
+          <div class="btnTwoC">
+            <span class="btnText2C">For android</span>
+          </div>
+        </div>
+
+        <div class="buttonC">
+          <span class="btnTextC">Sign Up</span>
+          <div class="btnTwoC">
+            <span class="btnText2C">Get started!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
+</div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mathit.org. All rights reserved.</p>
+    </footer>
+</body>
+
+<script>
+const title = document.querySelector('.HeaderTitle');
+const subtitle = document.querySelector('.HeaderSubtitle');
+const subtitle2 = document.querySelector('.HeaderSubtitle2');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    
+    // Move title slower than scroll
+    title.style.transform = `translateY(${scrollY * 0.5}px)`;
+    subtitle.style.transform = `translateY(${scrollY * 0.5}px)`;
+    subtitle2.style.transform = `translateY(${scrollY * 0.5}px)`;
+});
+</script>
+
+</html>
