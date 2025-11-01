@@ -269,7 +269,6 @@
   color: #ffffff;
   margin-bottom: 30px;
   line-height: 1.4;
-  font-family: "Comic Relief", system-ui;
   font-weight: 800;
   font-style: bold;
   letter-spacing: 0.1rem;
@@ -328,3 +327,4 @@
             bottom: 0;
             width: 100%;
         }
+
