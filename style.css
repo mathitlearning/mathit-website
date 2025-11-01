@@ -1,0 +1,323 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #141414;
+        }
+
+        /* Navagation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #1f1f1f;
+            color: #fff;
+            display: flex;
+            height: 60px;
+            padding-left: 1rem;
+            padding-right: 0rem;
+            align-items: center;
+            z-index: 100;
+        }
+
+/* Centered nav links */
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* On smaller screens: move to the left */
+@media (max-width: 768px) {
+    .nav-center {
+        position: relative;
+        left: 0;
+        transform: none;
+        justify-content: flex-start;
+    }
+}
+
+.nav-center a {
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+    color: #603BFF;
+}
+
+.nav-center img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+/* Search Bar Styling */
+.nav-search {
+  display: flex;
+  align-items: center;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  transition: all 0.3s ease;
+  height: 40px;
+  position: absolute;
+  right: 11.5rem;
+}
+
+.nav-search input {
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  background-color: #2c2c2c;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  flex: 1;
+  min-width: 150px;
+}
+
+.nav-search input::placeholder {
+  color: #d8d8d8;           /* placeholder text color */
+  opacity: 1;               /* ensure full opacity, default may be 0.5 */
+}
+
+.nav-search button {
+  background: none;          /* dark rounded background */
+  color: #fff;               /* icon color */
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  padding-top: 0.25rem;
+  
+  width: 40px;               /* make it square */
+  height: 40px;
+  border-radius: 50%;        /* makes it a circle */
+  
+  display: flex;             /* center the icon */
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-search button i {
+  font-size: 1.2rem;
+}
+
+.nav-search:hover button i {
+  color: #1a1a1a;        /* change icon color */
+}
+
+
+.nav-search:hover input {
+  color: #000000;           /* change text color */
+  background: #fff;
+}
+
+.nav-search:hover input::placeholder {
+  color: #131313;           /* change text color */
+}
+
+.nav-search:hover{
+  background: #fff;
+}
+
+/* Optional: make it stack neatly on mobile */
+/* Hide input on small screens — show only the icon */
+@media (max-width: 768px) {
+  .nav-search {
+    background: none;
+    display: none;
+    border: none;
+    right: 4rem;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+
+  .nav-search input {
+    display: none; /* hide the search box */
+  }
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  height: 40px;
+  gap: 1rem;
+  position: absolute;
+  border-radius: 50px;
+  right: 0.5rem;
+}
+
+.nav-icons button {
+  background: none;          /* dark rounded background */
+  color: #fff;               /* icon color */
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  padding-top: 0.25rem;
+  
+  width: 40px;               /* make it square */
+  height: 40px;
+  border-radius: 50%;        /* makes it a circle */
+  
+  display: flex;             /* center the icon */
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icons button:hover {
+  color: #0e0e0e;
+  background: #fff;
+}
+
+
+        header {
+    position: relative;
+    min-height: 20vh; /* taller for more scroll space */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 203, 154, 0.8) 0%,
+        rgba(255, 66, 246, 0.6) 25%,
+        rgba(162, 0, 255, 0.9) 65%,
+        rgba(2, 0, 36, 1) 100%
+    );
+}
+
+
+        
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: auto;
+}
+
+.illustration img {
+  width: 250px;
+}
+
+.content {
+  text-align: center;
+}
+
+.content img {
+  width: 300px;
+  height: 300px;
+  animation: float 12s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .content img {
+  width: 200px;
+  height: 200px;
+  animation: float 6s ease-in-out infinite;
+  transform-origin: center;
+}
+}
+
+.content h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn.green {
+  background-color: #603BFF;
+  color: white;
+}
+
+.btn.white {
+  background-color: #fff;
+  color: #5c5c5c;
+}
+
+.landing{
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  height: 80vh;
+}
+
+        footer {
+            background: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
