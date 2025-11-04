@@ -16,22 +16,35 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Titan+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
     <!-- SECTION: Top Navagation Bar -->
     <nav>
-        <div class="nav-center">
+        <div class="nav-left">
             <img src="Icon.png" alt="Icon">
             <a href="#home">MathIt</a>
         </div>
 
+        <div class="nav-center">
+            <a href="#home">Home</a>
+            <a href="#home">Dashboard</a>
+            <a href="#home">App</a>
+            <a href="#home">Teacher</a>
+            <a href="#home">Classrooms</a>
+            <a href="#home" class="gradient-text">Supercharged</a>
+        </div>
+
         <!-- Search Field -->
-        <div class="nav-search">
-            <input type="text" placeholder="Search..." />
-            <button type="submit">
-              <i class="fi fi-rr-search"></i>
+        <div class="nav-buttons">
+            <button type="submit" class="login">
+              Login
+            </button>
+            <button type="submit" class="signup">
+              SignUp
             </button>
         </div>
 
@@ -40,10 +53,10 @@
             <button type="submit">
               <i class="fi fi-rr-apps-add"></i>
             </button>
-            <button type="submit">
+            <button type="submit" class="not-desktop">
               <i class="fi fi-rr-user"></i>
             </button>
-            <button type="submit">
+            <button type="submit" class="not-desktop">
               <i class="fi fi-rr-layers"></i>
             </button>
         </div>
@@ -51,19 +64,22 @@
     </nav>
 
     <!-- SECTION: Landing -->
-     <div class="landing">
-    <div class="container">
-    <div class="content">
-      <img src="calculator.png" alt="Icon">
-      <h1>The Sum of All Math Practice, Your All in One Way to Practice Math!</h1>
-      <div class="buttons">
-        <button class="btn green">GET STARTED</button>
-        <button class="btn white">I ALREADY HAVE AN ACCOUNT</button>
-      </div>
+<section class="landing">
+  <div class="container">
+    <!-- Left content -->
+    <div class="landing-text">
+      <h1>Lessons and Practice</h1>
+      <h2>To help you improve</h2>
+      <p>Math is a platform with a wide varity of practice tools to help you learn.</p>
+      <button class="cta-btn">Get Started</button>
+    </div>
+
+    <!-- Right image -->
+    <div class="landing-image">
+      <img src="Vectors/undraw_verify-data_k0y1.svg" alt="Person coding illustration">
     </div>
   </div>
-
-  </div>
+</section>
 
     <!-- SECTION: Footer -->
     <footer class="footer">
