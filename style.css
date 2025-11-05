@@ -1,28 +1,35 @@
 
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             height: 100vh;
              padding-bottom: env(safe-area-inset-bottom);
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-color: #0f0e17;
+            font-family: "Inter", sans-serif;
         }
 
         /* Navagation Bar */
         nav {
-            position: sticky;
-            top: 0;
-            background: #0c0c13;
-            color: #fff;
-            display: flex;
-            height: 80px;
-            padding-left: 1rem;
-            padding-right: 0rem;
-            align-items: center;
-            z-index: 100;
-        }
+    position: sticky;
+    top: 0;
+    background: linear-gradient(
+  to bottom,
+  rgba(9, 9, 14, 1),
+  rgba(9, 9, 14, 0.8)
+);
+    backdrop-filter: blur(20px);      /* the actual blur effect */
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    color: #fff;
+    display: flex;
+    height: 80px;
+    padding-left: 1rem;
+    padding-right: 0rem;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid rgba(9, 9, 14, 0.8); /* optional subtle line */
+}
+
 
 /* Left */
 .nav-left {
@@ -104,61 +111,17 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #ffd280, #8271ff);
+  background: linear-gradient(90deg, #9980ff, #8271ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .nav-center {
         display: none;
     }
-}
-
-/* Search Bar Styling */
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 0 0.5rem;
-  transition: all 0.3s ease;
-  height: 50px;
-  position: absolute;
-  gap: 1rem;
-  right: 4rem;
-}
-
-.nav-buttons button{
-  border: none;
-  border-radius: 1000px;
-  width: 120px;
-  height: 40px;
-  transition: transform 0.1s ease-in-out;
-  cursor: pointer;
-}
-
-.nav-buttons button:hover {
-  transform: scale(1.03);
-}
-
-.login {
-  background-color: white;
-  color: #603BFF;
-  font-size: 0.9rem;
-  font-weight: 600;
-  font-family: sans-serif;
-  font-style: bold;
-}
-
-.signup {
-  background-color: #603BFF;
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 600;
-  font-family: sans-serif;
-  font-style: bold;
 }
 
 @media (max-width: 768px) {
@@ -201,13 +164,6 @@
   background: #fff;
 }
 
-@media (min-width: 769px) {
-  .not-desktop {
-    display: none;
-  }
-}
-
-
         header {
     position: relative;
     min-height: 20vh; /* taller for more scroll space */
@@ -227,13 +183,158 @@
     );
 }
 
+
+
+
+
+
+
+/* HERO SECTION BACKGROUND */
+.hero {
+  position: relative;
+  background-color: #603BFF;
+  background-image: url('Vectors/IconGrid.svg');
+  background-repeat: repeat;
+  background-size: 1200px;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  height: 300px;
+}
+
+
+/* CONTENT STYLING */
+.content {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column; /* stacked by default (mobile view) */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+}
+
+/* TEXT WRAPPER (so h1 & p stay stacked even on desktop) */
+.text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+/* TEXT STYLING */
+.content h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* CARD STYLING */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+  min-width: 250px;
+
+  display: flex;               /* make buttons stack vertically */
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;                   /* space between buttons */
+}
+
+.signin-btn {
+  background-color: #603BFF;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.create-account {
+  background-color: #121214;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.card button:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE — switch to side-by-side layout on desktop */
+@media (min-width: 900px) {
+
+  .hero {
+  background-color: #603BFF;
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0), rgb(96, 59, 255)),
+  url('Vectors/IconGrid.svg');
+  background-repeat: repeat;
+  background-size: 2000px;
+}
+
+  .content {
+    flex-direction: row; /* side-by-side layout */
+    align-items: center;
+    text-align: left;
+  }
+
+  /* TEXT STYLING */
+.content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* CARD STYLING */
+.card {
+  width: 500px;
+  padding: 3% 0;
+}
+
+  .text-group {
+    align-items: flex-start;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .landing {
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  font-family: "Inter", sans-serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
   padding: 0 5%;
 }
 
@@ -273,6 +374,7 @@
   padding: 12px 48px;
   font-size: 1rem;
   margin-top: 25px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
@@ -292,6 +394,7 @@
 /* RESPONSIVE (mobile layout) */
 @media (max-width: 768px) {
   .container {
+    margin-top: 50px;
     flex-direction: column;
     text-align: center;
   }
@@ -312,12 +415,10 @@
 
 
         footer {
-          display: none;
-            background: rgb(24, 22, 29);
+            background: rgba(9, 9, 14, 1);
             color: #fff;
             text-align: center;
             padding: 1rem 0;
-            position: fixed;
             bottom: 0;
             width: 100%;
         }
