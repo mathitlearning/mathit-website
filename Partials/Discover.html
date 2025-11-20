@@ -1,0 +1,175 @@
+<!-- SECTION: Courses Hero -->
+<section class="courses-hero">
+  <div class="content">
+    <h1>Explore Our Courses</h1>
+    <p>Your path to mastering math starts here. Choose a course and begin learning.</p>
+  </div>
+</section>
+
+<!-- SECTION: Course Categories -->
+<section class="course-categories">
+  <div class="container">
+    <h2>Course Categories</h2>
+
+    <div class="categories-grid">
+      <div class="category-card">
+        <h3>Algebra</h3>
+        <p>Learn linear equations, polynomials, factoring, and more.</p>
+        <button onclick="window.location.href='algebra.html'">View Courses</button>
+      </div>
+
+      <div class="category-card">
+        <h3>Geometry</h3>
+        <p>Master shapes, angles, proofs, and spatial reasoning.</p>
+        <button onclick="window.location.href='geometry.html'">View Courses</button>
+      </div>
+
+      <div class="category-card">
+        <h3>Calculus</h3>
+        <p>Dive into limits, derivatives, integrals, and advanced topics.</p>
+        <button onclick="window.location.href='calculus.html'">View Courses</button>
+      </div>
+
+      <div class="category-card">
+        <h3>Statistics</h3>
+        <p>Understand probability, data analysis, distributions, and more.</p>
+        <button onclick="window.location.href='statistics.html'">View Courses</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Featured Courses -->
+<section class="featured-courses">
+  <div class="container">
+    <h2>Featured Courses</h2>
+
+    <div class="featured-grid">
+      <div class="featured-card">
+        <h3>Introduction to Algebra</h3>
+        <p>A perfect starting point for beginners. Learn the foundations of algebra with guided lessons and practice.</p>
+        <button onclick="window.location.href='intro-algebra.html'">Start Learning</button>
+      </div>
+
+      <div class="featured-card">
+        <h3>Geometry Essentials</h3>
+        <p>Understand core geometric concepts through visuals and interactive examples.</p>
+        <button onclick="window.location.href='geometry-essentials.html'">Start Learning</button>
+      </div>
+
+      <div class="featured-card">
+        <h3>Calculus Fundamentals</h3>
+        <p>A friendly introduction to calculus concepts with step‑by‑step explanations.</p>
+        <button onclick="window.location.href='calculus-fundamentals.html'">Start Learning</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Call to Action -->
+<section class="courses-cta">
+  <div class="cta-container">
+    <h2>Ready to Begin Your Learning Journey?</h2>
+    <p>Join thousands of learners building stronger math skills every day.</p>
+    <button class="cta-btn" onclick="window.location.href='Signup.html'">Create an Account</button>
+  </div>
+</section>
+
+<!-- CSS STYLES -->
+<style>
+  .courses-hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f5f7ff;
+  }
+  .courses-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  .courses-hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  /* Categories */
+  .course-categories {
+    padding: 60px 20px;
+  }
+  .course-categories h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .category-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  .category-card h3 {
+    margin-bottom: 10px;
+  }
+  .category-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #4a6cff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Featured Courses */
+  .featured-courses {
+    padding: 60px 20px;
+    background: #eef1ff;
+  }
+  .featured-courses h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .featured-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .featured-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #4a6cff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  /* CTA Section */
+  .courses-cta {
+    text-align: center;
+    padding: 70px 20px;
+    background: #4a6cff;
+    color: #fff;
+  }
+  .courses-cta .cta-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    color: #4a6cff;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
