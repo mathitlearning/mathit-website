@@ -1,0 +1,69 @@
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <!-- Wave 1 (lowest) -->
+    <path fill="#603BFF" fill-opacity="0.3">
+      <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+        M0,160 C360,200 1080,120 1440,160 L1440,320 L0,320 Z;
+        M0,140 C360,180 1080,160 1440,140 L1440,320 L0,320 Z;
+        M0,160 C360,200 1080,120 1440,160 L1440,320 L0,320 Z
+      " />
+    </path>
+
+    <!-- Wave 2 (middle) -->
+    <path fill="#603BFF" fill-opacity="0.4">
+      <animate attributeName="d" dur="10s" repeatCount="indefinite" values="
+        M0,180 C360,220 1080,140 1440,180 L1440,320 L0,320 Z;
+        M0,160 C360,200 1080,160 1440,160 L1440,320 L0,320 Z;
+        M0,180 C360,220 1080,140 1440,180 L1440,320 L0,320 Z
+      " />
+    </path>
+
+    <!-- Wave 3 (top) -->
+    <path fill="#603BFF" fill-opacity="0.5">
+      <animate attributeName="d" dur="15s" repeatCount="indefinite" values="
+        M0,200 C360,240 1080,160 1440,200 L1440,320 L0,320 Z;
+        M0,180 C360,220 1080,180 1440,180 L1440,320 L0,320 Z;
+        M0,200 C360,240 1080,160 1440,200 L1440,320 L0,320 Z
+      " />
+    </path>
+  </svg>
+
+  <!-- SECTION: Join Classroom -->
+<section class="Join-Classroom">
+  <div class="Join-Classroom-content">
+    <div class="Join-Classroom-text-group">
+      <h1>Classrooms</h1>
+      <p>Have a MathIt code? Type it in the box to join a classroom</p>
+    </div>
+
+    <div class="Join-Classroom-card">
+        <div class="pin-container">
+        <input type="password" maxlength="1" class="pin-input" inputmode="numeric" pattern="[0-9]*">
+        <input type="password" maxlength="1" class="pin-input" inputmode="numeric" pattern="[0-9]*">
+        <input type="password" maxlength="1" class="pin-input" inputmode="numeric" pattern="[0-9]*">
+        <input type="password" maxlength="1" class="pin-input" inputmode="numeric" pattern="[0-9]*">
+        <input type="password" maxlength="1" class="pin-input" inputmode="numeric" pattern="[0-9]*">
+    </div>
+      <button class="signin-btn" onclick="window.location.href='Login.html'">Join</button>
+      <button class="create-account" onclick="window.location.href='Login.html'">Start my own classroom</button>
+    </div>
+  </div>
+</section>
+
+
+<script>
+    const inputs = document.querySelectorAll('.pin-input');
+
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', () => {
+            if (input.value.length === 1 && index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && index > 0) {
+                inputs[index - 1].focus();
+            }
+        });
+    });
+</script>

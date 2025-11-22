@@ -1,0 +1,127 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #f0f0f0;
+  overflow: auto;          /* allow scrolling */
+  scrollbar-width: none; 
+}
+
+.waves {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+}
+
+.pin-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 36px;
+    }
+    .pin-input {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        text-align: center;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        background-color: white;
+    }
+    .pin-input:focus {
+        border-color: #007BFF;
+        box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    }
+    
+
+/* HERO SECTION BACKGROUND */
+.Join-Classroom {
+  position: relative;
+  background:none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 100px;
+  height: 300px;
+}
+
+
+/* CONTENT STYLING */
+.Join-Classroom-content {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column; /* stacked by default (mobile view) */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+}
+
+/* TEXT WRAPPER (so h1 & p stay stacked even on desktop) */
+.Join-Classroom-text-group {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+/* TEXT STYLING */
+.Join-Classroom-content h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.Join-Classroom-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* CARD STYLING */
+.Join-Classroom-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 60px;
+  text-align: center;
+  min-width: 100px;
+  max-width: 250px;
+  display: flex;               /* make buttons stack vertically */
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;                   /* space between buttons */
+}
+
+.Join-Classroom-card button:hover {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE — switch to side-by-side layout on desktop */
+@media (min-width: 900px) {
+
+    .Join-Classroom{
+        gap: 60px;
+    }
+
+  .Join-Classroom-content {
+    flex-direction: row; /* side-by-side layout */
+    align-items: center;
+    text-align: left;
+  }
+
+  /* TEXT STYLING */
+.Join-Classroom-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* CARD STYLING */
+.Join-Classroom-card {
+  min-width: 500px;
+  padding: 3% 0;
+}
+
+  .text-group {
+    align-items: flex-start;
+  }
+}
